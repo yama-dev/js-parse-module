@@ -46,9 +46,10 @@ import PARSE_MODULE from 'js-parse-module';
 
 ### Str2AutoLink
 
-| Parameter | Type   | Default     | Description                       | 
-| :---      | :---:  | :---:       | :---                              | 
-| str       | string | - ※省略不可 | 文字列にhtmlのリンクが付与されます。 | 
+| Parameter | Type   | Default      | Description                          |
+| :---      | :---:  | :---:        | :---                                 |
+| str       | string | - ※省略不可 | 文字列にhtmlのリンクが付与されます。 |
+| target    | string | '_blank'     | リンクのtarget属性を指定します。     |
 
 <br>
 
@@ -57,6 +58,7 @@ import PARSE_MODULE from 'js-parse-module';
 | Parameter | Type   | Default     | Description                                    | 
 | :---      | :---:  | :---:       | :---                                           | 
 | str       | string | - ※省略不可 | 文字列(ハッシュタグ)にhtmlのリンクが付与されます。 | 
+| target    | string | '_blank'     | リンクのtarget属性を指定します。     |
 
 <br><br><br>
 
