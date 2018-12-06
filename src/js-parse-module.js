@@ -1,17 +1,13 @@
 /*!
  * JS PARSE_MODULE (JavaScript Library)
  *   js-parse-module.js
- * Version 0.0.3
+ * Version 0.0.4
  * Repository https://github.com/yama-dev/js-parse-module
  * Author yama-dev
  * Licensed under the MIT license.
  */
 
 export class PARSE_MODULE {
-
-  constructor(options={}){
-    console.log(this);
-  }
 
   static Str2AutoLink(str, target='_blank') {
 
