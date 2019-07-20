@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title></title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+  <script src="../dist/js-parse-module.js"></script>
+</head>
+<body>
+<div>
+
+<pre><code>
+  console.log(PARSE_MODULE.Str2AddLink('http://www.google.com'));
+  -> <a href="http://www.google.com" target="_blank">http://www.google.com</a>
+
+  console.log(PARSE_MODULE.Str2AddLink('http://www.google.com',''));
+  -> <a href="http://www.google.com" target="">http://www.google.com</a>
+
+  console.log(PARSE_MODULE.Str2AddLink('http://www.google.com','_blank'));
+  -> <a href="http://www.google.com" target="_blank">http://www.google.com</a>
+
+  console.log(PARSE_MODULE.Str2AddLink('http://www.google.com','_self'));
+  -> <a href="http://www.google.com" target="_self">http://www.google.com</a>
+
+  console.log(PARSE_MODULE.Str2AddLinkHashtag());
+  -> false
+
+  console.log(PARSE_MODULE.Str2AddLinkHashtag(''));
+  -> false
+
+  console.log(PARSE_MODULE.Str2AddLinkHashtag('#tags'));
+  -> <a href="https://twitter.com/search?q=%23tags" target="_blank">#tags</a>
+
+  console.log(PARSE_MODULE.Str2AddLinkHashtag('#tags','_self'));
+  -> <a href="https://twitter.com/search?q=%23tags" target="_self">#tags</a>
+
+  console.log(PARSE_MODULE.Str2DateFormat());
+  -> false
+
+  console.log(PARSE_MODULE.Str2DateFormat('2018.6.9'));
+  -> 2018-06-09
+
+  console.log(PARSE_MODULE.Str2DateFormat('2018/6/9'));
+  -> 2018-06-09
+
+  console.log(PARSE_MODULE.Str2DateFormat('2018-6-9'));
+  -> 2018-06-09
+
+  console.log(PARSE_MODULE.Str2DateFormat('2018.06.09'));
+  -> 2018-06-09
+
+  console.log(PARSE_MODULE.Str2DateFormat('2018/06/09'));
+  -> 2018-06-09
+
+  console.log(PARSE_MODULE.Str2DateFormat('2018年6月9日'));
+  -> 2018-06-09
+
+  console.log(PARSE_MODULE.Str2DateFormat('2018-06-09'));
+  -> 2018-06-09
+
+  console.log(PARSE_MODULE.Str2Mustache());
+  -> false
+
+  console.log(PARSE_MODULE.Str2Mustache('test {{ str_test }} text {{ str_empty }} sample', {str_test: '123456789'}, true));
+  -> test 123456789 text  sample
+
+  console.log(PARSE_MODULE.Str2Mustache('test {{ str_test }} text {{ str_empty }} sample', {str_test: '123456789'}, false));
+  -> test 123456789 text {{ str_empty }} sample
+
+  console.log(PARSE_MODULE.Str2zeroPadding());
+  -> false
+
+  console.log(PARSE_MODULE.Str2zeroPadding(123));
+  -> 123
+
+  console.log(PARSE_MODULE.Str2zeroPadding(123,10));
+  -> 0000000123
+
+  console.log(PARSE_MODULE.Str2zeroPadding(123456789,10));
+  -> 0123456789
+</code></pre>
+
+<script>
+  console.log(PARSE_MODULE.Str2AddLink('http://www.google.com'));
+  console.log(PARSE_MODULE.Str2AddLink('http://www.google.com',''));
+  console.log(PARSE_MODULE.Str2AddLink('http://www.google.com','_blank'));
+  console.log(PARSE_MODULE.Str2AddLink('http://www.google.com','_self'));
+
+  console.log(PARSE_MODULE.Str2AddLinkHashtag());
+  console.log(PARSE_MODULE.Str2AddLinkHashtag(''));
+  console.log(PARSE_MODULE.Str2AddLinkHashtag('#tags'));
+  console.log(PARSE_MODULE.Str2AddLinkHashtag('#tags','_self'));
+
+  console.log(PARSE_MODULE.Str2DateFormat());
+  console.log(PARSE_MODULE.Str2DateFormat('2018.6.9'));
+  console.log(PARSE_MODULE.Str2DateFormat('2018/6/9'));
+  console.log(PARSE_MODULE.Str2DateFormat('2018-6-9'));
+  console.log(PARSE_MODULE.Str2DateFormat('2018.06.09'));
+  console.log(PARSE_MODULE.Str2DateFormat('2018/06/09'));
+  console.log(PARSE_MODULE.Str2DateFormat('2018年6月9日'));
+  console.log(PARSE_MODULE.Str2DateFormat('2018-06-09'));
+
+  console.log(PARSE_MODULE.Str2Mustache());
+  console.log(PARSE_MODULE.Str2Mustache('test {{ str_test }} text {{ str_empty }} sample', {str_test: '123456789'}, true));
+  console.log(PARSE_MODULE.Str2Mustache('test {{ str_test }} text {{ str_empty }} sample', {str_test: '123456789'}, false));
+
+  console.log(PARSE_MODULE.Str2zeroPadding());
+  console.log(PARSE_MODULE.Str2zeroPadding(123));
+  console.log(PARSE_MODULE.Str2zeroPadding(123456789));
+  console.log(PARSE_MODULE.Str2zeroPadding(123,10));
+  console.log(PARSE_MODULE.Str2zeroPadding(123456789,10));
+</script>
+
+</body>
+</html>
