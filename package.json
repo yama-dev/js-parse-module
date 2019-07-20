@@ -1,6 +1,6 @@
 {
-  "name": "js-parse-module",
-  "version": "0.0.4",
+  "name": "@yama-dev/js-parse-module",
+  "version": "0.1.0",
   "description": "javascript parse utility library.",
   "keywords": [
     "parse",
