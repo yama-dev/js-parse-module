@@ -10,9 +10,11 @@ javascript parse utility.
 
 ## Demo
 
+- [https://yama-dev.github.io/js-parse-module/examples/](https://yama-dev.github.io/js-parse-module/examples/)
+
 ## Installation,Download
 
-- npm -> [https://www.npmjs.com/package/js-parse-module](https://www.npmjs.com/package/js-parse-module)
+- npm -> [https://www.npmjs.com/package/@yama-dev/js-parse-module](https://www.npmjs.com/package/@yama-dev/js-parse-module)
 
 <br>
 

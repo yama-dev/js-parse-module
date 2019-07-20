@@ -12,17 +12,17 @@
 <div>
 
 <pre><code>
-  console.log(PARSE_MODULE.Str2AddLink('http://www.google.com'));
-  -> <a href="http://www.google.com" target="_blank">http://www.google.com</a>
+  console.log(PARSE_MODULE.Str2AddLink('https://www.google.com'));
+  -> <a href="https://www.google.com" target="_blank">https://www.google.com</a>
 
-  console.log(PARSE_MODULE.Str2AddLink('http://www.google.com',''));
-  -> <a href="http://www.google.com" target="">http://www.google.com</a>
+  console.log(PARSE_MODULE.Str2AddLink('https://www.google.com',''));
+  -> <a href="https://www.google.com" target="">https://www.google.com</a>
 
-  console.log(PARSE_MODULE.Str2AddLink('http://www.google.com','_blank'));
-  -> <a href="http://www.google.com" target="_blank">http://www.google.com</a>
+  console.log(PARSE_MODULE.Str2AddLink('https://www.google.com','_blank'));
+  -> <a href="https://www.google.com" target="_blank">https://www.google.com</a>
 
-  console.log(PARSE_MODULE.Str2AddLink('http://www.google.com','_self'));
-  -> <a href="http://www.google.com" target="_self">http://www.google.com</a>
+  console.log(PARSE_MODULE.Str2AddLink('https://www.google.com','_self'));
+  -> <a href="https://www.google.com" target="_self">https://www.google.com</a>
 
   console.log(PARSE_MODULE.Str2AddLinkHashtag());
   -> false
@@ -83,10 +83,10 @@
 </code></pre>
 
 <script>
-  console.log(PARSE_MODULE.Str2AddLink('http://www.google.com'));
-  console.log(PARSE_MODULE.Str2AddLink('http://www.google.com',''));
-  console.log(PARSE_MODULE.Str2AddLink('http://www.google.com','_blank'));
-  console.log(PARSE_MODULE.Str2AddLink('http://www.google.com','_self'));
+  console.log(PARSE_MODULE.Str2AddLink('https://www.google.com'));
+  console.log(PARSE_MODULE.Str2AddLink('https://www.google.com',''));
+  console.log(PARSE_MODULE.Str2AddLink('https://www.google.com','_blank'));
+  console.log(PARSE_MODULE.Str2AddLink('https://www.google.com','_self'));
 
   console.log(PARSE_MODULE.Str2AddLinkHashtag());
   console.log(PARSE_MODULE.Str2AddLinkHashtag(''));
