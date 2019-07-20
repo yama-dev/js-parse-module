@@ -4,7 +4,7 @@
 
 ## Feature
 
-javascript parse utility library.
+javascript parse utility.
 
 <br>
 
@@ -22,7 +22,7 @@ javascript parse utility library.
 
 ``` bash
 # install npm.
-npm install --save-dev js-parse-module
+npm install --save-dev @yama-dev/js-parse-module
 ```
 
 ``` javascript
@@ -35,7 +35,7 @@ import PARSE_MODULE from 'js-parse-module';
 ``` html
 <script src="./js-parse-module.js"></script>
 <script>
-  let str = PARSE_MODULE.Str2AutoLink('https://wwww.google.com');
+  let str = PARSE_MODULE.Str2AddLink('https://wwww.google.com');
   console.log(str);
 </script>
 ```
@@ -44,7 +44,7 @@ import PARSE_MODULE from 'js-parse-module';
 
 ## API
 
-### Str2AutoLink
+### Str2AddLink
 
 | Parameter | Type   | Default      | Description                          |
 | :---      | :---:  | :---:        | :---                                 |
@@ -53,7 +53,7 @@ import PARSE_MODULE from 'js-parse-module';
 
 <br>
 
-### Str2AutoLinkHashtag
+### Str2AddLinkHashtag
 
 | Parameter | Type   | Default     | Description                                    | 
 | :---      | :---:  | :---:       | :---                                           | 
