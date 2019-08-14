@@ -1,6 +1,6 @@
 {
   "name": "@yama-dev/js-parse-module",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "javascript parse utility library.",
   "keywords": [
     "parse",
@@ -8,14 +8,16 @@
   ],
   "author": "yama-dev",
   "license": "MIT",
-  "main": "./dist/js-parse-module.js",
+  "main": "./index.js",
   "scripts": {
     "start": "npm install && npm run develop",
-    "develop": "npm-run-all -p webpack:develop server",
-    "production": "npm-run-all -p webpack:build server",
-    "server": "browser-sync start --server ./ --directory ./sample --files **/*.css **/*.js **/*.html",
-    "webpack:develop": "webpack --progress --colors --watch",
-    "webpack:build": "webpack --mode=production --progress --colors --watch"
+    "develop": "npm-run-all -p build:develop server:develop",
+    "server:develop": "browser-sync start --server ./ --directory ./examples --files **/*.css **/*.js **/*.html",
+    "build:develop": "webpack --mode=development --progress --colors --watch",
+    "production": "npm-run-all -p build:production server:production",
+    "server:production": "browser-sync start --server ./ --directory ./examples --files **/*.css **/*.js **/*.html",
+    "build:production": "webpack --mode=production --progress --colors --watch",
+    "test": "mocha --compilers js:babel-core/register"
   },
   "repository": {
     "type": "git",
@@ -26,13 +28,60 @@
     "email": "tatsuya.yamamoto69@gmail.com"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.4",
-    "babel-preset-env": "^1.7.0",
-    "browser-sync": "^2.26.7",
-    "npm-run-all": "^4.1.5",
-    "webpack": "^4.39.1",
-    "webpack-cli": "^3.3.6"
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-transform-object-assign": "^7.2.0",
+    "@babel/preset-env": "^7.3.1",
+    "babel-loader": "^8.0.5",
+    "browser-sync": "^2.23.6",
+    "eslint": "^5.12.0",
+    "eslint-loader": "^2.1.1",
+    "mocha": "^5.2.0",
+    "npm-run-all": "^4.1.2",
+    "terser-webpack-plugin": "^1.4.1",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "commonjs": true,
+      "es6": true,
+      "jquery": true,
+      "node": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+    },
+    "plugins": [],
+    "rules": {
+      "indent": [
+        "error",
+        2,
+        {
+          "outerIIFEBody": 0
+        }
+      ],
+      "quotes": [
+        "error",
+        "single"
+      ],
+      "semi": [
+        "error",
+        "always"
+      ],
+      "no-console": "warn",
+      "no-unused-vars": "warn"
+    }
   }
 }

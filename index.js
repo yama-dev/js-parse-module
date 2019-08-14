@@ -4,7 +4,7 @@ import {
   Str2DateFormat,
   Str2Mustache,
   Str2zeroPadding
-} from './core/';
+} from './libs/';
 
 export class PARSE_MODULE {
 
