@@ -1,7 +1,7 @@
 /*!
  * JS PARSE MODULE (JavaScript Library)
  *   @yama-dev/js-parse-module
- * Version 0.2.0
+ * Version 0.2.1
  * Repository https://github.com/yama-dev/js-parse-module
  * Copyright yama-dev
  * Licensed MIT
